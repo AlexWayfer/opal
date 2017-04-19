@@ -1,5 +1,11 @@
 require 'corelib/enumerable'
 
+# Internal properties:
+#
+# - $$map         [JS::Object]
+# - $$smap        [JS::Object]
+# - $$proc        [Proc,null,nil] the default proc used for missing keys
+# - $$by_identity [Boolean]       a flag indicating that retrieval should happen by identity
 class Hash
   include Enumerable
 
